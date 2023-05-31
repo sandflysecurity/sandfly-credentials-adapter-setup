@@ -1,0 +1,31 @@
+{
+    "listen_address": ":8123",
+    "sandfly_server_public_key": "serverPublicKeyFromSandflyAboutPage",
+    "sandfly_node_public_key": "nodePublicKeyFromSandflyAboutPage",
+    "credential_services": {
+        "conjur_user1": {
+            "provider": "cyberark_conjur",
+            "config": {
+                "conjur_url": "https://conjure-host.example.com",
+                "conjur_account": "myConjurAccount",
+                "api_user": "host/MyApp/myAppApiUser",
+                "api_key": "myApiKey1234",
+                "credential_username": "user1",
+                "credential_type": "password",
+                "credential_variable": "MyApp/secretVar"
+            }
+        },
+        "conjur_user2": {
+            "provider": "cyberark_conjur",
+            "config": {
+                "conjur_url": "https://conjure-host.example.com",
+                "conjur_account": "myConjurAccount",
+                "api_user": "host/MyApp/myAppApiUser",
+                "api_key": "myApiKey1234",
+                "credential_username": "user2",
+                "credential_type": "sshkey",
+                "credential_variable": "MyApp/secretSshKeyVar"
+            }
+        }
+    }
+}

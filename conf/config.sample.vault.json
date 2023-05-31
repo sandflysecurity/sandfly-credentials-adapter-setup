@@ -1,0 +1,50 @@
+{
+    "listen_address": ":8123",
+    "sandfly_server_public_key": "serverPublicKeyFromSandflyAboutPage",
+    "sandfly_node_public_key": "nodePublicKeyFromSandflyAboutPage",
+    "credential_services": {
+        "vault_ssh_secret": {
+            "provider": "vault_kv_sshkey",
+            "config": {
+                "vault_address": "https://vault-server.example.com:8200",
+                "vault_ca_cert_b64": "vaultCaCertificate...",
+                "secret_config": {
+                    "vault_token": "my.vault.login.token",
+                    "kv2_mount": "kv2",
+                    "secret_name": "ssh_secret",
+                    "ssh_private_key_property_name": "sshkey",
+                    "username_property_name": "username",
+                    "cache_seconds": 600
+                }
+            }
+        },
+        "vault_password_secret": {
+            "provider": "vault_kv_password",
+            "config": {
+                "vault_address": "https://vault-server.example.com:8200",
+                "vault_ca_cert_b64": "vaultCaCertificate...",
+                "secret_config": {
+                    "vault_token": "my.vault.login.token",
+                    "kv2_mount": "kv2",
+                    "secret_name": "password_secret",
+                    "password_property_name": "password",
+                    "username_property_name": "username",
+                    "cache_seconds": 600
+                }
+            }
+        },
+        "vault_ssh_otp": {
+            "provider": "vault_ssh_otp",
+            "config": {
+                "vault_address": "https://vault-server.example.com:8200",
+                "vault_ca_cert_b64": "vaultCaCertificate...",
+                "secret_config": {
+                    "vault_token": "my.vault.login.token",
+                    "ssh_mount": "ssh",
+                    "otp_role_name": "otp_key_role",
+                    "host_username": "root"
+                }
+            }
+        }
+    }
+}
