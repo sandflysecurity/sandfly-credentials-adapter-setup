@@ -2,6 +2,7 @@
     "listen_address": ":8123",
     "sandfly_server_public_key": "serverPublicKeyFromSandflyAboutPage",
     "sandfly_node_public_key": "nodePublicKeyFromSandflyAboutPage",
+    "log_level": "info",
     "credential_services": {
         "vault_ssh_secret": {
             "provider": "vault_kv_sshkey",
