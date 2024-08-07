@@ -5,4 +5,3 @@ The Sandfly Credentials Adapter is an implementation of the Sandfly [external cr
 Please contact Sandfly Support for assistance in configuring and deploying this implementation.
 
 https://sandflysecurity.com/
-
